@@ -1,0 +1,548 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1053E751-128D-44AF-9EE1-1D46F7B6C422}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineClassroom</RootNamespace>
+    <AssemblyName>OnlineClassroom</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44397</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\all.css" />
+    <Content Include="images\20210619_133152.jpg" />
+    <Content Include="images\20210702_231234.jpg" />
+    <Content Include="Student\20201202_145414.jpg" />
+    <Content Include="Student\pic.jpg" />
+    <Content Include="Student\stddeleteassignmentanswer.aspx" />
+    <Content Include="Student\stdsignin.aspx" />
+    <Content Include="Student\stdhome.aspx" />
+    <Content Include="Student\stdsignup.aspx" />
+    <Content Include="Student\joinclass.aspx" />
+    <Content Include="images\tile.jpg" />
+    <Content Include="Student\stdclassall.aspx" />
+    <Content Include="Student\stdclassq.aspx" />
+    <Content Include="Student\stdclassassignment.aspx" />
+    <Content Include="Student\stdtochat.aspx" />
+    <Content Include="Student\stdviewcomments.aspx" />
+    <Content Include="Student\stdclassdetails.aspx" />
+    <Content Include="Student\stdviewstudents.aspx" />
+    <Content Include="Student\stdchat.aspx" />
+    <Content Include="Student\stdprofile.aspx" />
+    <Content Include="Student\stdallchat.aspx" />
+    <Content Include="Student\stdabout.aspx" />
+    <Content Include="Student\stdaddanswer.aspx" />
+    <Content Include="Student\stdaddassignment.aspx" />
+    <Content Include="Teacher\pic.jpg" />
+    <Content Include="Teacher\thrdeleteassignment.aspx" />
+    <Content Include="Teacher\thrdeleteassignmentanswer.aspx" />
+    <Content Include="Teacher\thrdeletequestion.aspx" />
+    <Content Include="Teacher\thrdeleteanswer.aspx" />
+    <Content Include="Teacher\thrdeletecomment.aspx" />
+    <Content Include="Teacher\thrdeletematerial.aspx" />
+    <Content Include="Teacher\thrhome.aspx" />
+    <Content Include="Teacher\thrnoassignment.aspx" />
+    <Content Include="Teacher\thrsignin.aspx" />
+    <Content Include="Teacher\thrsignup.aspx" />
+    <Content Include="Teacher\addclass.aspx" />
+    <Content Include="Teacher\thrclassall.aspx" />
+    <Content Include="Teacher\thrdeleteclass.aspx" />
+    <Content Include="Teacher\thraddmaterial.aspx" />
+    <Content Include="Teacher\thrtochat.aspx" />
+    <Content Include="Teacher\thrviewcomments.aspx" />
+    <Content Include="Teacher\thrviewstudents.aspx" />
+    <Content Include="Teacher\thrclassq.aspx" />
+    <Content Include="Teacher\thraddquestion.aspx" />
+    <Content Include="Teacher\thrviewanswers.aspx" />
+    <Content Include="Teacher\thrnocomments.aspx" />
+    <Content Include="Teacher\thrclassassignment.aspx" />
+    <Content Include="Teacher\thraddassignment.aspx" />
+    <Content Include="Teacher\thrviewassignments.aspx" />
+    <Content Include="Teacher\thrchat.aspx" />
+    <Content Include="Teacher\thrallchat.aspx" />
+    <Content Include="Teacher\thrabout.aspx" />
+    <Content Include="Teacher\thrprofile.aspx" />
+    <Content Include="Teacher\thrclassdetails.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-duotone-900.svg" />
+    <Content Include="webfonts\fa-light-300.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\stddeleteassignmentanswer.aspx.cs">
+      <DependentUpon>stddeleteassignmentanswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stddeleteassignmentanswer.aspx.designer.cs">
+      <DependentUpon>stddeleteassignmentanswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdnavi.Master.cs">
+      <DependentUpon>stdnavi.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdnavi.Master.designer.cs">
+      <DependentUpon>stdnavi.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdsignin.aspx.cs">
+      <DependentUpon>stdsignin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdsignin.aspx.designer.cs">
+      <DependentUpon>stdsignin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdhome.aspx.cs">
+      <DependentUpon>stdhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdhome.aspx.designer.cs">
+      <DependentUpon>stdhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdsignup.aspx.cs">
+      <DependentUpon>stdsignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdsignup.aspx.designer.cs">
+      <DependentUpon>stdsignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\joinclass.aspx.cs">
+      <DependentUpon>joinclass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\joinclass.aspx.designer.cs">
+      <DependentUpon>joinclass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdclassall.aspx.cs">
+      <DependentUpon>stdclassall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdclassall.aspx.designer.cs">
+      <DependentUpon>stdclassall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdclassq.aspx.cs">
+      <DependentUpon>stdclassq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdclassq.aspx.designer.cs">
+      <DependentUpon>stdclassq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdclassassignment.aspx.cs">
+      <DependentUpon>stdclassassignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdclassassignment.aspx.designer.cs">
+      <DependentUpon>stdclassassignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdtochat.aspx.cs">
+      <DependentUpon>stdtochat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdtochat.aspx.designer.cs">
+      <DependentUpon>stdtochat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdviewcomments.aspx.cs">
+      <DependentUpon>stdviewcomments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdviewcomments.aspx.designer.cs">
+      <DependentUpon>stdviewcomments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdclassdetails.aspx.cs">
+      <DependentUpon>stdclassdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdclassdetails.aspx.designer.cs">
+      <DependentUpon>stdclassdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdviewstudents.aspx.cs">
+      <DependentUpon>stdviewstudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdviewstudents.aspx.designer.cs">
+      <DependentUpon>stdviewstudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdchat.aspx.cs">
+      <DependentUpon>stdchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdchat.aspx.designer.cs">
+      <DependentUpon>stdchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdprofile.aspx.cs">
+      <DependentUpon>stdprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdprofile.aspx.designer.cs">
+      <DependentUpon>stdprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdallchat.aspx.cs">
+      <DependentUpon>stdallchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdallchat.aspx.designer.cs">
+      <DependentUpon>stdallchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdabout.aspx.cs">
+      <DependentUpon>stdabout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdabout.aspx.designer.cs">
+      <DependentUpon>stdabout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdaddanswer.aspx.cs">
+      <DependentUpon>stdaddanswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdaddanswer.aspx.designer.cs">
+      <DependentUpon>stdaddanswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\stdaddassignment.aspx.cs">
+      <DependentUpon>stdaddassignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\stdaddassignment.aspx.designer.cs">
+      <DependentUpon>stdaddassignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteassignment.aspx.cs">
+      <DependentUpon>thrdeleteassignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteassignment.aspx.designer.cs">
+      <DependentUpon>thrdeleteassignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteassignmentanswer.aspx.cs">
+      <DependentUpon>thrdeleteassignmentanswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteassignmentanswer.aspx.designer.cs">
+      <DependentUpon>thrdeleteassignmentanswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrdeletequestion.aspx.cs">
+      <DependentUpon>thrdeletequestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrdeletequestion.aspx.designer.cs">
+      <DependentUpon>thrdeletequestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteanswer.aspx.cs">
+      <DependentUpon>thrdeleteanswer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteanswer.aspx.designer.cs">
+      <DependentUpon>thrdeleteanswer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrdeletecomment.aspx.cs">
+      <DependentUpon>thrdeletecomment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrdeletecomment.aspx.designer.cs">
+      <DependentUpon>thrdeletecomment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrdeletematerial.aspx.cs">
+      <DependentUpon>thrdeletematerial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrdeletematerial.aspx.designer.cs">
+      <DependentUpon>thrdeletematerial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrnavi.Master.cs">
+      <DependentUpon>thrnavi.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrnavi.Master.designer.cs">
+      <DependentUpon>thrnavi.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrhome.aspx.cs">
+      <DependentUpon>thrhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrhome.aspx.designer.cs">
+      <DependentUpon>thrhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrnoassignment.aspx.cs">
+      <DependentUpon>thrnoassignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrnoassignment.aspx.designer.cs">
+      <DependentUpon>thrnoassignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrsignin.aspx.cs">
+      <DependentUpon>thrsignin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrsignin.aspx.designer.cs">
+      <DependentUpon>thrsignin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrsignup.aspx.cs">
+      <DependentUpon>thrsignup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrsignup.aspx.designer.cs">
+      <DependentUpon>thrsignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\addclass.aspx.cs">
+      <DependentUpon>addclass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\addclass.aspx.designer.cs">
+      <DependentUpon>addclass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrclassall.aspx.cs">
+      <DependentUpon>thrclassall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrclassall.aspx.designer.cs">
+      <DependentUpon>thrclassall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteclass.aspx.cs">
+      <DependentUpon>thrdeleteclass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrdeleteclass.aspx.designer.cs">
+      <DependentUpon>thrdeleteclass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thraddmaterial.aspx.cs">
+      <DependentUpon>thraddmaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thraddmaterial.aspx.designer.cs">
+      <DependentUpon>thraddmaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrtochat.aspx.cs">
+      <DependentUpon>thrtochat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrtochat.aspx.designer.cs">
+      <DependentUpon>thrtochat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrviewcomments.aspx.cs">
+      <DependentUpon>thrviewcomments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrviewcomments.aspx.designer.cs">
+      <DependentUpon>thrviewcomments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrviewstudents.aspx.cs">
+      <DependentUpon>thrviewstudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrviewstudents.aspx.designer.cs">
+      <DependentUpon>thrviewstudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrclassq.aspx.cs">
+      <DependentUpon>thrclassq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrclassq.aspx.designer.cs">
+      <DependentUpon>thrclassq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thraddquestion.aspx.cs">
+      <DependentUpon>thraddquestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thraddquestion.aspx.designer.cs">
+      <DependentUpon>thraddquestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrviewanswers.aspx.cs">
+      <DependentUpon>thrviewanswers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrviewanswers.aspx.designer.cs">
+      <DependentUpon>thrviewanswers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrnocomments.aspx.cs">
+      <DependentUpon>thrnocomments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrnocomments.aspx.designer.cs">
+      <DependentUpon>thrnocomments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrclassassignment.aspx.cs">
+      <DependentUpon>thrclassassignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrclassassignment.aspx.designer.cs">
+      <DependentUpon>thrclassassignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thraddassignment.aspx.cs">
+      <DependentUpon>thraddassignment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thraddassignment.aspx.designer.cs">
+      <DependentUpon>thraddassignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrviewassignments.aspx.cs">
+      <DependentUpon>thrviewassignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrviewassignments.aspx.designer.cs">
+      <DependentUpon>thrviewassignments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrchat.aspx.cs">
+      <DependentUpon>thrchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrchat.aspx.designer.cs">
+      <DependentUpon>thrchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrallchat.aspx.cs">
+      <DependentUpon>thrallchat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrallchat.aspx.designer.cs">
+      <DependentUpon>thrallchat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrabout.aspx.cs">
+      <DependentUpon>thrabout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrabout.aspx.designer.cs">
+      <DependentUpon>thrabout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrprofile.aspx.cs">
+      <DependentUpon>thrprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrprofile.aspx.designer.cs">
+      <DependentUpon>thrprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\thrclassdetails.aspx.cs">
+      <DependentUpon>thrclassdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\thrclassdetails.aspx.designer.cs">
+      <DependentUpon>thrclassdetails.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="files\doc.pdf" />
+    <None Include="packages.config" />
+    <Content Include="Student\stdnavi.Master" />
+    <Content Include="Teacher\thrnavi.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-duotone-900.eot" />
+    <Content Include="webfonts\fa-duotone-900.ttf" />
+    <Content Include="webfonts\fa-duotone-900.woff" />
+    <Content Include="webfonts\fa-duotone-900.woff2" />
+    <Content Include="webfonts\fa-light-300.eot" />
+    <Content Include="webfonts\fa-light-300.ttf" />
+    <Content Include="webfonts\fa-light-300.woff" />
+    <Content Include="webfonts\fa-light-300.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50713</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44397/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
